@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import { Jumbotron } from 'reactstrap';
+import React, { Component } from 'react'
+import Navigation from './layouts/navigation'
+import Header from './layouts/header'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Jumbotron>
-          Hey
-        </Jumbotron>
+        <Navigation />
+        <Header title="About" />
       </div>
     );
   }
