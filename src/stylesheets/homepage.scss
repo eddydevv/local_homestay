@@ -1,0 +1,20 @@
+@import './base.scss';
+
+#landing {
+  background-color: rgba($columbia-blue, 0.3);
+  width: 100%;
+}
+
+#landing-header {
+  text-align: center;
+  padding: 2% 10%;
+  margin: 0;
+  font-family: $roboto; 
+}
+
+#landing-subheader {
+  text-align: center;
+  padding: 0 10%;
+  margin: 0;
+  font-family: $roboto; 
+}

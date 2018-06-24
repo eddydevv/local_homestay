@@ -1,4 +1,23 @@
 @import './base.scss';
+@import './homepage.scss';
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  min-height: 10%;
+  padding: 1%;
+  margin: 0;
+}
+
+section {
+  min-height: 90%;
+  padding: 3%;
+}
 
 .main-header {
   background-color: $header-bg;
