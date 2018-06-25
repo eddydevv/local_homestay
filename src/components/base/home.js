@@ -17,7 +17,8 @@ export default class Home extends Component {
     this.landingDisplay = this.landingDisplay.bind(this)
     this.toggle = this.toggle.bind(this)
     this.state = {
-      isOpen: false
+      isOpen: false,
+      hasNav: false
     }
   }
 

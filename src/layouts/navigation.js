@@ -7,12 +7,15 @@ import {
   Nav,
   NavItem,
   NavLink } from 'reactstrap'
+import { Link } from 'react-router'
 
 export default class Navigation extends Component {
   constructor(props) {
     super(props)
 
     this.toggle = this.toggle.bind(this)
+    this.renderMain = this.renderMain.bind(this)
+    this.renderOther = this.renderOther.bind(this)
     this.state = {
       isOpen: false
     }
@@ -24,7 +27,7 @@ export default class Navigation extends Component {
     }) 
   }
 
-  render() {
+  renderMain() {
     return (
       <div>
         <Navbar color="light" light expand="md">
@@ -48,6 +51,18 @@ export default class Navigation extends Component {
           </Collapse>
         </Navbar>
       </div>
+    )
+  }
+
+  renderOther() {
+    return(
+      <div></div>
+    )
+  }
+
+  render() {
+    return(
+      <div>{this.props.hasNav ? this.renderMain() : this.renderOther()}</div>
     )
   }
 }
