@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Navigation from '../../layouts/navigation'
 import { 
   TabContent, 
   TabPane, 
@@ -41,10 +40,6 @@ export default class About extends Component {
   render() {
     return (
       <div id="about" className="base">
-        <Navigation hasNav={this.state.hasNav} />
-        <header id="base-header" class="main-header">
-          <h1>About</h1>
-        </header>
         <section>
           <Row>
             <Col sm="2">

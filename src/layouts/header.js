@@ -24,7 +24,7 @@ export default class Header extends Component {
 
   altHeader() {
     return (
-      <header className="main-header">
+      <header className="alt-header">
         <h1>{this.props.title}</h1>
       </header>
     )

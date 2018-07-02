@@ -7,7 +7,7 @@ import {
   Nav,
   NavItem,
   NavLink } from 'reactstrap'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 
 export default class Navigation extends Component {
   constructor(props) {
@@ -36,16 +36,16 @@ export default class Navigation extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="#">ABOUT</NavLink>
+                <NavLink href="#"><Link to="/about">ABOUT</Link></NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#">SAFETY</NavLink>
+                <NavLink href="#"><Link to="/safety">SAFETY</Link></NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#">FAQs</NavLink>
+                <NavLink href="#"><Link to="/faqs">FAQs</Link></NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#">CONTACT</NavLink>
+                <NavLink href="#"><Link to="/contact">CONTACT</Link></NavLink>
               </NavItem>
             </Nav>
           </Collapse>
@@ -55,8 +55,20 @@ export default class Navigation extends Component {
   }
 
   renderOther() {
-    return(
-      <div></div>
+    return (
+      <div>
+        <Navbar color="light" light expand="md">
+          <NavbarBrand href="/">Local Homestay</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="#">LOGIN</NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
     )
   }
 
