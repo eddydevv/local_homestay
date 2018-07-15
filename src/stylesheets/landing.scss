@@ -1,0 +1,20 @@
+@import './base.scss';
+.about-card {
+    margin: 1em;
+    background-color: rgba($brown-sugar, $alpha: 0.2);
+    .about-header {
+        background-color: rgba($color: $columbia-blue, $alpha: 0.3);
+    }
+}
+
+#landing-vid,
+.video-react-controls-enabled,
+.video-react-has-started,
+.video-react-playing,
+.video-react-fluid,
+.video-react-user-inactive,
+.video-react-workinghover,
+.video-react {
+    padding: 0;
+    margin: 0;
+}

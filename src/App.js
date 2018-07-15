@@ -1,37 +1,17 @@
 import React, { Component } from 'react'
-import Home from './components/base/home'
-import About from './components/base/about'
-import Safety from './components/base/safety'
-import FAQs from './components/base/faqs'
-import Contact from './components/base/contact'
-import Navigation from './layouts/navigation'
-import Header from './layouts/header'
+import Landing from './components/home/landing'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Base from './components/base/base'
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      hasNav: true,
-      title: ''
-    }
-  }
 
   render() {
     return (
       <Router>
         <div>
-          <Navigation hasNav={this.state.hasNav} />
-          <Header title={this.state.title} />
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/about" render={props => (
-              <About title="About" />
-            )} />
-            <Route exact path="/safety" component={Safety} />
-            <Route exact path="/faqs" component={FAQs} />
-            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/" component={Base} />
+            <Route exact path="/landing" component={Landing} />
           </Switch>
         </div>
       </Router>
