@@ -28,6 +28,15 @@ export default class Navigation extends Component {
   }
 
   renderMain() {
+    const pages = ['about', 'safety', 'faqs', 'contact']
+    const navLinks = pages.map(page => {
+      return (
+        <NavItem>
+          <NavLink href="#"><Link to={'/' + page}>{page.toUpperCase()}</Link></NavLink>
+        </NavItem>
+      )
+    })
+
     return (
       <div>
         <Navbar color="light" light expand="md">
@@ -35,18 +44,7 @@ export default class Navigation extends Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="#"><Link to="/about">ABOUT</Link></NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#"><Link to="/safety">SAFETY</Link></NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#"><Link to="/faqs">FAQs</Link></NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#"><Link to="/contact">CONTACT</Link></NavLink>
-              </NavItem>
+              {navLinks}
             </Nav>
           </Collapse>
         </Navbar>
