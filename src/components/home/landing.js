@@ -75,7 +75,6 @@ export default class Landing extends Component {
   render() {
     return(
       <div>
-        {this.landingVid()}
         {this.landingAbout()}
       </div>
     )
